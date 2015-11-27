@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+  <% include templates/header.ejs%>
+
+  <h1><%= title %></h1>
+  <h3> <%= sometext %></h3>
+
+  <p> <%= jsonFile.categoryName%></p>
+  <ul>
+    <% jsonFile.categories.forEach(function(item) { %>
+    <a href="https://www.thenewboston.com/videos_food.php?cat=<%= item.categoryID%>"><%= item.categoryName%></a><br>
+    <%});%>
+  </ul>
+
+
+
+  <ul>
+    <% for (var i=0; i<5; i++){%>
+      <li> tuna:  </li>
+    <%}%>
+  </ul>
+
+
+  </body>
+</html>
